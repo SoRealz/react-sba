@@ -6,7 +6,7 @@ const apiKey = '3d15e168f2514f98bcb1b30596a0cb97'; // API key
 
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
   const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
-  return response.data.articles.slice(0, 5); // Take first 5 articles
+  return response.data.articles.slice(0, 10); // Take first 5 articles
 });
 
 const newsSlice = createSlice({
